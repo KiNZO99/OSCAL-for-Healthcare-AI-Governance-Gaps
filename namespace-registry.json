@@ -1,0 +1,59 @@
+{
+  "namespace": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+  "oscal_version": "1.1.2",
+  "description": "Custom properties and link relations for AI governance extensions to OSCAL POA&M",
+  "properties": [
+    {
+      "name": "ai-rmf-subcategory",
+      "context": "finding, poam-item",
+      "values": "NIST AI RMF subcategory identifier (e.g. GOVERN 6.1, MEASURE 2.7)",
+      "purpose": "No native OSCAL construct for AI RMF subcategory references"
+    },
+    {
+      "name": "ai-risk-persistence-type",
+      "context": "risk",
+      "values": ["discrete", "continuous"],
+      "purpose": "Native risk.status assumes discrete closure — no way to declare non-closable risk"
+    },
+    {
+      "name": "ai-gap-owner",
+      "context": "poam-item",
+      "values": "UUID reference to a party in metadata.parties",
+      "purpose": "poam-item has no native ownership field — ownership requires 5+ hop traversal"
+    },
+    {
+      "name": "ai-gap-status",
+      "context": "poam-item",
+      "values": ["open", "investigating", "remediating", "closed", "transferred-to-monitoring"],
+      "purpose": "poam-item has no native status field — status lives on risk.status"
+    },
+    {
+      "name": "ai-lifecycle-phase",
+      "context": "observation, risk",
+      "values": ["procurement", "deployment", "monitoring"],
+      "purpose": "Identifies which AI lifecycle phase the governance gap applies to"
+    },
+    {
+      "name": "ai-vendor-name",
+      "context": "observation",
+      "values": "Name of the third-party AI vendor",
+      "purpose": "Tags observations to a specific AI vendor"
+    },
+    {
+      "name": "ai-model-version",
+      "context": "observation",
+      "values": "AI model version identifier",
+      "purpose": "AI risk is model-version-bound — not tracked natively in OSCAL"
+    }
+  ],
+  "link_relations": [
+    {
+      "rel": "ai-vendor-assessment",
+      "purpose": "Links to a vendor risk assessment report"
+    },
+    {
+      "rel": "ai-drift-report",
+      "purpose": "Links to a concept drift or model monitoring report"
+    }
+  ]
+}
