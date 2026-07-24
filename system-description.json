@@ -1,0 +1,27 @@
+{
+  "system_name": "AmbiScribe AI",
+  "system_id": "ambiscribe-outpatient-2026",
+  "type": "Ambient AI clinical documentation scribe (cloud-hosted LLM)",
+  "setting": "Outpatient ambulatory clinic, mid-size U.S. healthcare organization",
+  "regulatory_context": ["HIPAA Security Rule", "HIPAA Privacy Rule", "NIST AI RMF 1.0", "NIST SP 800-53 Rev. 5"],
+  "actors": [
+    "Clinician — reviews and approves AI-generated notes",
+    "Patient — recorded during clinical encounter",
+    "AmbiScribe AI Service — cloud LLM performing transcription and note generation",
+    "EHR System — receives approved clinical notes",
+    "AI Scribe Vendor — third-party SaaS provider managing the AI service",
+    "AI Governance Team — responsible for risk assessment and remediation tracking"
+  ],
+  "data_flows": [
+    "Ambient audio capture (clinician-patient encounter to AI service)",
+    "Speech-to-text transcription (AI service internal)",
+    "Clinical note generation (LLM output to clinician review interface)",
+    "Clinician review and EHR submission (approved note to medical record)",
+    "Vendor model updates (vendor pushes model changes to AI service)"
+  ],
+  "scope": {
+    "in_scope": ["Outpatient encounters only", "Single synthetic AI scribe vendor", "Five induced governance gaps", "Representational fit evaluation only"],
+    "out_of_scope": ["Inpatient or emergency settings", "Real patient data or PHI", "Live deployment testing", "Clinician usability evaluation"]
+  },
+  "note": "This system is entirely synthetic. No real clinical system, patient data, or vendor is represented."
+}

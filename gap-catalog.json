@@ -1,0 +1,44 @@
+{
+  "gaps": [
+    {
+      "id": "GAP-01",
+      "title": "Unassessed Third-Party AI Scribe Vendor Risk",
+      "ai_rmf_subcategory": "GOVERN 6.1",
+      "sp800_53_controls": ["SR-3", "SR-6", "SA-9", "SA-4"],
+      "risk_type": "discrete",
+      "description": "No formal AI-specific vendor risk assessment has been conducted for the AmbiScribe AI third-party service. The organization has not evaluated the vendor's model training practices, data handling, incident response, or model update notification mechanisms."
+    },
+    {
+      "id": "GAP-02",
+      "title": "Insufficient AI System Security Evaluation",
+      "ai_rmf_subcategory": "MEASURE 2.7",
+      "sp800_53_controls": ["RA-5", "SI-2", "CA-8", "SA-11"],
+      "risk_type": "discrete",
+      "description": "No security evaluation covering AI-specific attack vectors has been performed, including prompt injection, adversarial input resilience, model extraction, data poisoning, or API security."
+    },
+    {
+      "id": "GAP-03",
+      "title": "Unexamined AI Privacy Risk for Patient Data",
+      "ai_rmf_subcategory": "MEASURE 2.10",
+      "sp800_53_controls": ["PT-2", "PT-3", "AR-2", "DM-1"],
+      "risk_type": "discrete",
+      "description": "Privacy risks of the AI system's processing of patient data have not been examined, including training data leakage, membership inference, data retention practices, or patient consent mechanisms for ambient AI recording."
+    },
+    {
+      "id": "GAP-04",
+      "title": "No Procedures for Response and Recovery from Unknown AI Risk",
+      "ai_rmf_subcategory": "MANAGE 2.3",
+      "sp800_53_controls": ["IR-4", "IR-6", "IR-8", "CP-2"],
+      "risk_type": "continuous",
+      "description": "No documented procedures exist for responding to previously unknown AI risks such as emergent hallucination patterns, model behavioral regression after vendor updates, transcription bias, or novel adversarial exploitation."
+    },
+    {
+      "id": "GAP-05",
+      "title": "Absent Post-Deployment AI System Monitoring",
+      "ai_rmf_subcategory": "MANAGE 4.1",
+      "sp800_53_controls": ["CA-7", "SI-4", "AU-6", "PM-14"],
+      "risk_type": "continuous",
+      "description": "No post-deployment monitoring plan exists for the AI scribe system. No mechanisms track hallucination rates, transcription degradation, vendor model version changes, or documentation quality decline."
+    }
+  ]
+}
