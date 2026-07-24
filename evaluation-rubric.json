@@ -1,0 +1,24 @@
+{
+  "title": "OSCAL POA&M Representational Fit Rubric",
+  "version": "1.0",
+  "date": "2026-07-24",
+  "author": "Nimesh Jayesh Shetty",
+  "oscal_version": "1.1.2",
+  "basis": "Wand and Weber (1993); Venable et al. (2016) FEDS Step 3",
+  "scoring": {
+    "2": "Complete — dedicated native or documented extension construct represents the element clearly",
+    "1": "Partial — element representable only through generic, overloaded, or indirect construct",
+    "0": "Missing — no construct represents the element"
+  },
+  "scoring_rule": "Native encodings scored without custom namespace properties. Extended encodings scored with documented namespace properties available.",
+  "criteria": [
+    {"id": "C1", "name": "Gap Description", "maps_to": "RQ1"},
+    {"id": "C2", "name": "Risk Category and Control Mapping", "maps_to": "RQ1, RQ2"},
+    {"id": "C3", "name": "Remediation Action and Milestones", "maps_to": "RQ1"},
+    {"id": "C4", "name": "Linked Evidence", "maps_to": "RQ1, RQ2"},
+    {"id": "C5", "name": "Ownership", "maps_to": "RQ1, RQ2"},
+    {"id": "C6", "name": "Status", "maps_to": "RQ1, RQ2"},
+    {"id": "C7", "name": "Risk Persistence Type", "maps_to": "RQ3"}
+  ],
+  "matrix": "5 gaps x 2 encodings x 7 criteria = 70 cells, scored in Chapter 4"
+}
