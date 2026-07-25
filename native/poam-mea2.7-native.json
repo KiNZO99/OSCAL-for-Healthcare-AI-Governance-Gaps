@@ -1,0 +1,164 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "b2d1a327-1cc5-444a-9d5e-9e24ddee55a4",
+    "metadata": {
+      "title": "POA&M: Insufficient AI System Security Evaluation (Native)",
+      "last-modified": "2026-07-24T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "security-engineer",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "18a154d2-d3db-4892-b91a-d0e401232f8b",
+        "title": "Observation: Insufficient AI System Security Evaluation",
+        "description": "Security assessment records show no testing for AI-specific attack vectors.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-24T00:00:00Z",
+        "relevant-evidence": [
+          {
+            "href": "#acfe9429-b7c0-43b8-9948-79459b48c945",
+            "description": "Security assessment records with no AI-specific testing"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "0b74b236-ebc8-4884-ad25-7c3471bcaf40",
+        "title": "Finding: Insufficient AI System Security Evaluation",
+        "description": "AI system security has not been evaluated per MEASURE 2.7.",
+        "target": {
+          "type": "objective-id",
+          "target-id": "RA-5",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "18a154d2-d3db-4892-b91a-d0e401232f8b"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "cb2ac81b-326c-4c5e-8d33-16f46d5b9a27"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "cb2ac81b-326c-4c5e-8d33-16f46d5b9a27",
+        "title": "Risk: Insufficient AI System Security Evaluation",
+        "description": "No AI-specific security evaluation has been performed covering prompt injection, adversarial inputs, or model extraction.",
+        "statement": "AI-specific vulnerabilities may exist undetected in the scribe system.",
+        "status": "open",
+        "related-observations": [
+          {
+            "observation-uuid": "18a154d2-d3db-4892-b91a-d0e401232f8b"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "0a6e5d98-a790-4dfb-b046-6b16a48d2eab",
+            "lifecycle": "planned",
+            "title": "Commission AI-specific security assessment.",
+            "description": "Commission AI-specific security assessment.",
+            "tasks": [
+              {
+                "uuid": "e16b0b6d-756c-42ca-acac-aa12b2ac7822",
+                "type": "milestone",
+                "title": "Complete AI penetration test report",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-24T00:00:00Z",
+                    "end": "2026-10-31T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "security-engineer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "b02936f9-973e-4595-b659-ed556ec229c3",
+        "title": "Insufficient AI System Security Evaluation",
+        "description": "No AI-specific security evaluation has been performed covering prompt injection, adversarial inputs, or model extraction.",
+        "related-observations": [
+          {
+            "observation-uuid": "18a154d2-d3db-4892-b91a-d0e401232f8b"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "0b74b236-ebc8-4884-ad25-7c3471bcaf40"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "cb2ac81b-326c-4c5e-8d33-16f46d5b9a27"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "acfe9429-b7c0-43b8-9948-79459b48c945",
+          "title": "Security assessment records with no AI-specific testing",
+          "description": "Security assessment records with no AI-specific testing"
+        }
+      ]
+    }
+  }
+}

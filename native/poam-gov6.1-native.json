@@ -1,0 +1,164 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "47f0a82f-af3a-4a10-af8d-17d39c7137f9",
+    "metadata": {
+      "title": "POA&M: Unassessed Third-Party AI Scribe Vendor Risk (Native)",
+      "last-modified": "2026-07-24T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "vendor-liaison",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "b853f40a-cb50-4a9c-9d2c-98a53262fe0b",
+        "title": "Observation: Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "Contract review found no clauses for evaluating the vendor's AI practices.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-24T00:00:00Z",
+        "relevant-evidence": [
+          {
+            "href": "#dff59fde-3969-4148-b26d-9d810105774a",
+            "description": "Vendor contract with no AI assessment clauses"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "78b8aa2e-ec60-4ec5-bf73-7e95d8eb4488",
+        "title": "Finding: Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "Organization lacks vendor risk assessment procedures for AI third-party services per GOVERN 6.1.",
+        "target": {
+          "type": "objective-id",
+          "target-id": "SR-3",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "b853f40a-cb50-4a9c-9d2c-98a53262fe0b"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "cb1900be-4393-42f1-8624-b0ed44c11199"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "cb1900be-4393-42f1-8624-b0ed44c11199",
+        "title": "Risk: Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "No AI-specific vendor risk assessment has been conducted for the AmbiScribe AI service.",
+        "statement": "Unquantified third-party AI risk due to absence of formal vendor assessment.",
+        "status": "investigating",
+        "related-observations": [
+          {
+            "observation-uuid": "b853f40a-cb50-4a9c-9d2c-98a53262fe0b"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "9d8988fd-3eae-45b5-96db-c1e65965224c",
+            "lifecycle": "planned",
+            "title": "Conduct AI-specific vendor risk assessment and update contract terms.",
+            "description": "Conduct AI-specific vendor risk assessment and update contract terms.",
+            "tasks": [
+              {
+                "uuid": "719a253c-97c0-45a3-a6b8-974316509fca",
+                "type": "milestone",
+                "title": "Complete vendor risk assessment",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-24T00:00:00Z",
+                    "end": "2026-09-30T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "vendor-liaison"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "8897a8c0-0d7f-4121-aabf-5d1487852c16",
+        "title": "Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "No AI-specific vendor risk assessment has been conducted for the AmbiScribe AI service.",
+        "related-observations": [
+          {
+            "observation-uuid": "b853f40a-cb50-4a9c-9d2c-98a53262fe0b"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "78b8aa2e-ec60-4ec5-bf73-7e95d8eb4488"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "cb1900be-4393-42f1-8624-b0ed44c11199"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "dff59fde-3969-4148-b26d-9d810105774a",
+          "title": "Vendor contract with no AI assessment clauses",
+          "description": "Vendor contract with no AI assessment clauses"
+        }
+      ]
+    }
+  }
+}

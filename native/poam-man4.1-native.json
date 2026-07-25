@@ -1,0 +1,164 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "4b05bf39-aa3c-4d1b-abd8-3a102c123ca7",
+    "metadata": {
+      "title": "POA&M: Absent Post-Deployment AI Monitoring (Native)",
+      "last-modified": "2026-07-24T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "ai-governance-lead",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "bc604b2b-0e72-41f4-8f56-b51f81b04685",
+        "title": "Observation: Absent Post-Deployment AI Monitoring",
+        "description": "Operations review confirmed no AI monitoring metrics or thresholds are defined.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-24T00:00:00Z",
+        "relevant-evidence": [
+          {
+            "href": "#31a27042-b5dc-4835-ba67-49e13447d4c4",
+            "description": "Operations documentation with no AI monitoring provisions"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "5801c71c-2bc0-49bd-9a92-f4a7f50305e0",
+        "title": "Finding: Absent Post-Deployment AI Monitoring",
+        "description": "Post-deployment monitoring has not been implemented per MANAGE 4.1.",
+        "target": {
+          "type": "objective-id",
+          "target-id": "CA-7",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "bc604b2b-0e72-41f4-8f56-b51f81b04685"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "d928a810-b750-4467-8344-38583ad93d27"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "d928a810-b750-4467-8344-38583ad93d27",
+        "title": "Risk: Absent Post-Deployment AI Monitoring",
+        "description": "No post-deployment monitoring plan exists for the AI scribe. No tracking of hallucination rates, transcription quality, or model version changes.",
+        "statement": "AI output degradation from model drift or vendor updates will go undetected.",
+        "status": "open",
+        "related-observations": [
+          {
+            "observation-uuid": "bc604b2b-0e72-41f4-8f56-b51f81b04685"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "4cbf3028-d072-4b1f-967f-1eed0bcca6f4",
+            "lifecycle": "planned",
+            "title": "Implement post-deployment monitoring with defined metrics and thresholds.",
+            "description": "Implement post-deployment monitoring with defined metrics and thresholds.",
+            "tasks": [
+              {
+                "uuid": "82c4ee42-6fab-4194-8814-7eef86f19aa8",
+                "type": "milestone",
+                "title": "Deploy AI monitoring dashboard",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-24T00:00:00Z",
+                    "end": "2026-11-30T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "ai-governance-lead"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "81292bc0-59e9-4d88-a4cc-4c300c93a3c8",
+        "title": "Absent Post-Deployment AI Monitoring",
+        "description": "No post-deployment monitoring plan exists for the AI scribe. No tracking of hallucination rates, transcription quality, or model version changes.",
+        "related-observations": [
+          {
+            "observation-uuid": "bc604b2b-0e72-41f4-8f56-b51f81b04685"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "5801c71c-2bc0-49bd-9a92-f4a7f50305e0"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "d928a810-b750-4467-8344-38583ad93d27"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "31a27042-b5dc-4835-ba67-49e13447d4c4",
+          "title": "Operations documentation with no AI monitoring provisions",
+          "description": "Operations documentation with no AI monitoring provisions"
+        }
+      ]
+    }
+  }
+}

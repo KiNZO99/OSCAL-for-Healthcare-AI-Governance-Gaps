@@ -1,0 +1,164 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "3c767efe-1843-4594-9003-f5a85b7a646c",
+    "metadata": {
+      "title": "POA&M: Unexamined AI Privacy Risk for Patient Data (Native)",
+      "last-modified": "2026-07-24T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "privacy-officer",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "968f6646-9ea6-4d6a-848d-e8ecbcff0aba",
+        "title": "Observation: Unexamined AI Privacy Risk for Patient Data",
+        "description": "Patient consent forms do not mention AI-mediated ambient recording.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-24T00:00:00Z",
+        "relevant-evidence": [
+          {
+            "href": "#69c1c6f7-8fd6-40e8-8570-257a21352327",
+            "description": "Consent forms lacking AI recording disclosure"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "00565b5c-d696-4a0e-bee6-45bfdfb699fc",
+        "title": "Finding: Unexamined AI Privacy Risk for Patient Data",
+        "description": "AI privacy risk has not been examined per MEASURE 2.10.",
+        "target": {
+          "type": "objective-id",
+          "target-id": "PT-2",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "968f6646-9ea6-4d6a-848d-e8ecbcff0aba"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "aeec57fd-dfee-4b40-9377-b3f79d038fa2"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "aeec57fd-dfee-4b40-9377-b3f79d038fa2",
+        "title": "Risk: Unexamined AI Privacy Risk for Patient Data",
+        "description": "Privacy risks of AI processing of patient data have not been examined, including data retention and patient consent for ambient recording.",
+        "statement": "Patient PHI may be subject to data leakage or unauthorized retention without informed consent.",
+        "status": "investigating",
+        "related-observations": [
+          {
+            "observation-uuid": "968f6646-9ea6-4d6a-848d-e8ecbcff0aba"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "37b51557-7ef6-4609-b31b-38b4931ab81c",
+            "lifecycle": "planned",
+            "title": "Conduct AI privacy impact assessment and update consent forms.",
+            "description": "Conduct AI privacy impact assessment and update consent forms.",
+            "tasks": [
+              {
+                "uuid": "ef40e9d6-ec51-4cf8-a374-ff7a61479e91",
+                "type": "milestone",
+                "title": "Complete privacy assessment and updated consent",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-24T00:00:00Z",
+                    "end": "2026-09-15T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "privacy-officer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "695c5aa5-84a1-4bee-9635-6571b8c02984",
+        "title": "Unexamined AI Privacy Risk for Patient Data",
+        "description": "Privacy risks of AI processing of patient data have not been examined, including data retention and patient consent for ambient recording.",
+        "related-observations": [
+          {
+            "observation-uuid": "968f6646-9ea6-4d6a-848d-e8ecbcff0aba"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "00565b5c-d696-4a0e-bee6-45bfdfb699fc"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "aeec57fd-dfee-4b40-9377-b3f79d038fa2"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "69c1c6f7-8fd6-40e8-8570-257a21352327",
+          "title": "Consent forms lacking AI recording disclosure",
+          "description": "Consent forms lacking AI recording disclosure"
+        }
+      ]
+    }
+  }
+}

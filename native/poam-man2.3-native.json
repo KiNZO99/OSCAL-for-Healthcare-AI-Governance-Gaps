@@ -1,0 +1,164 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "10526a04-ac94-44c9-b87e-c735e82baef2",
+    "metadata": {
+      "title": "POA&M: No Response Procedures for Unknown AI Risk (Native)",
+      "last-modified": "2026-07-24T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "ai-governance-lead",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "56bc9687-d97d-49bd-9e22-dd13c5953736",
+        "title": "Observation: No Response Procedures for Unknown AI Risk",
+        "description": "Incident response plan covers infrastructure only, with no AI-specific procedures.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-24T00:00:00Z",
+        "relevant-evidence": [
+          {
+            "href": "#1f16c262-be0e-41dd-8e20-cd2aec54fac9",
+            "description": "Incident response plan with no AI-specific sections"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "c1513314-45d1-4587-bcc5-8344bfc3f519",
+        "title": "Finding: No Response Procedures for Unknown AI Risk",
+        "description": "No response and recovery procedures exist for unknown AI risks per MANAGE 2.3.",
+        "target": {
+          "type": "objective-id",
+          "target-id": "IR-4",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "56bc9687-d97d-49bd-9e22-dd13c5953736"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "5f23b03b-0c56-4f11-8627-026ac80b4932"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "5f23b03b-0c56-4f11-8627-026ac80b4932",
+        "title": "Risk: No Response Procedures for Unknown AI Risk",
+        "description": "No procedures exist for responding to previously unknown AI risks such as emergent hallucination patterns or model regression.",
+        "statement": "Emergent AI risks cannot be detected or contained in a structured manner.",
+        "status": "open",
+        "related-observations": [
+          {
+            "observation-uuid": "56bc9687-d97d-49bd-9e22-dd13c5953736"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "b1fb0599-a72d-492a-8f1b-032b876edd8e",
+            "lifecycle": "planned",
+            "title": "Develop AI-specific incident response procedures.",
+            "description": "Develop AI-specific incident response procedures.",
+            "tasks": [
+              {
+                "uuid": "9dd9cb81-f9b5-4d30-b3ee-ea7cb92c1dcc",
+                "type": "milestone",
+                "title": "Draft and approve AI incident response plan",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-24T00:00:00Z",
+                    "end": "2026-10-15T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "ai-governance-lead"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "e1020a19-3830-4988-a04e-12e5a553ae4f",
+        "title": "No Response Procedures for Unknown AI Risk",
+        "description": "No procedures exist for responding to previously unknown AI risks such as emergent hallucination patterns or model regression.",
+        "related-observations": [
+          {
+            "observation-uuid": "56bc9687-d97d-49bd-9e22-dd13c5953736"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "c1513314-45d1-4587-bcc5-8344bfc3f519"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "5f23b03b-0c56-4f11-8627-026ac80b4932"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "1f16c262-be0e-41dd-8e20-cd2aec54fac9",
+          "title": "Incident response plan with no AI-specific sections",
+          "description": "Incident response plan with no AI-specific sections"
+        }
+      ]
+    }
+  }
+}
