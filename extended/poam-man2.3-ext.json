@@ -1,0 +1,223 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "ff1c0e5a-9437-4196-ba64-ce9a1e9615fa",
+    "metadata": {
+      "title": "POA&M: No Response Procedures for Unknown AI Risk (Extended)",
+      "last-modified": "2026-07-25T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "ai-governance-lead",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "70dacf0d-5383-49f3-bf56-ae1af0311f08",
+        "title": "Observation: No Response Procedures for Unknown AI Risk",
+        "description": "Incident response plan covers infrastructure only, with no AI-specific procedures.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-25T00:00:00Z",
+        "props": [
+          {
+            "name": "ai-vendor-name",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "AmbiScribe AI"
+          },
+          {
+            "name": "ai-model-version",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "ambiscribe-llm-v3.2.1"
+          },
+          {
+            "name": "ai-lifecycle-phase",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "monitoring"
+          }
+        ],
+        "links": [
+          {
+            "rel": "ai-drift-report",
+            "href": "#70caac6f-d88b-4dd6-b9ee-3bf1de64188f"
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "href": "#70caac6f-d88b-4dd6-b9ee-3bf1de64188f",
+            "description": "Incident response plan with no AI-specific sections"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "2948da49-3357-4f7b-9c8d-c5e7b8a82d0a",
+        "title": "Finding: No Response Procedures for Unknown AI Risk",
+        "description": "No response and recovery procedures exist for unknown AI risks per MANAGE 2.3.",
+        "props": [
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "MANAGE 2.3"
+          }
+        ],
+        "target": {
+          "type": "objective-id",
+          "target-id": "IR-4",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "70dacf0d-5383-49f3-bf56-ae1af0311f08"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "7ef2901f-d00e-456d-bc87-a7b6d90479db"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "7ef2901f-d00e-456d-bc87-a7b6d90479db",
+        "title": "Risk: No Response Procedures for Unknown AI Risk",
+        "description": "No procedures exist for responding to previously unknown AI risks such as emergent hallucination patterns or model regression.",
+        "statement": "Emergent AI risks cannot be detected or contained in a structured manner.",
+        "status": "open",
+        "props": [
+          {
+            "name": "ai-risk-persistence-type",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "continuous"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "70dacf0d-5383-49f3-bf56-ae1af0311f08"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "b6701c41-355e-40b1-b28a-3660e060c8d3",
+            "lifecycle": "planned",
+            "title": "Develop AI-specific incident response procedures.",
+            "description": "Develop AI-specific incident response procedures.",
+            "tasks": [
+              {
+                "uuid": "dce66d76-0b7f-40c2-a530-cdc263588810",
+                "type": "milestone",
+                "title": "Draft and approve AI incident response plan",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-25T00:00:00Z",
+                    "end": "2026-10-15T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "ai-governance-lead"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "8ed26666-d1e6-4c5c-b65a-971534a3f21c",
+        "title": "No Response Procedures for Unknown AI Risk",
+        "description": "No procedures exist for responding to previously unknown AI risks such as emergent hallucination patterns or model regression.",
+        "props": [
+          {
+            "name": "ai-gap-owner",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          },
+          {
+            "name": "ai-gap-status",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "open"
+          },
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "MANAGE 2.3"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "70dacf0d-5383-49f3-bf56-ae1af0311f08"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "2948da49-3357-4f7b-9c8d-c5e7b8a82d0a"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "7ef2901f-d00e-456d-bc87-a7b6d90479db"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "70caac6f-d88b-4dd6-b9ee-3bf1de64188f",
+          "title": "Incident response plan with no AI-specific sections",
+          "description": "Incident response plan with no AI-specific sections",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-man2.3-ext-evidence.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

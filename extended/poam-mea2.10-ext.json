@@ -1,0 +1,223 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "ae1eb6df-e3ab-48a9-b84c-de92a39a01e0",
+    "metadata": {
+      "title": "POA&M: Unexamined AI Privacy Risk for Patient Data (Extended)",
+      "last-modified": "2026-07-25T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "privacy-officer",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "4cf84bb3-e1c2-47b9-b434-cda69c10057e",
+        "title": "Observation: Unexamined AI Privacy Risk for Patient Data",
+        "description": "Patient consent forms do not mention AI-mediated ambient recording.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-25T00:00:00Z",
+        "props": [
+          {
+            "name": "ai-vendor-name",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "AmbiScribe AI"
+          },
+          {
+            "name": "ai-model-version",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "ambiscribe-llm-v3.2.1"
+          },
+          {
+            "name": "ai-lifecycle-phase",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "deployment"
+          }
+        ],
+        "links": [
+          {
+            "rel": "ai-vendor-assessment",
+            "href": "#abc55e81-93bb-45a9-81a7-c00878fbcbe1"
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "href": "#abc55e81-93bb-45a9-81a7-c00878fbcbe1",
+            "description": "Consent forms lacking AI recording disclosure"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "f94e9f78-6596-4c9e-bc30-8353d3596c0b",
+        "title": "Finding: Unexamined AI Privacy Risk for Patient Data",
+        "description": "AI privacy risk has not been examined per MEASURE 2.10.",
+        "props": [
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "MEASURE 2.10"
+          }
+        ],
+        "target": {
+          "type": "objective-id",
+          "target-id": "PT-2",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "4cf84bb3-e1c2-47b9-b434-cda69c10057e"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "b6d7d887-d7db-4bb4-b75b-dfe741d0aa67"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "b6d7d887-d7db-4bb4-b75b-dfe741d0aa67",
+        "title": "Risk: Unexamined AI Privacy Risk for Patient Data",
+        "description": "Privacy risks of AI processing of patient data have not been examined, including data retention and patient consent for ambient recording.",
+        "statement": "Patient PHI may be subject to data leakage or unauthorized retention without informed consent.",
+        "status": "investigating",
+        "props": [
+          {
+            "name": "ai-risk-persistence-type",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "discrete"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "4cf84bb3-e1c2-47b9-b434-cda69c10057e"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "b75e30fa-a46e-4fc6-844b-772e405cab0a",
+            "lifecycle": "planned",
+            "title": "Conduct AI privacy impact assessment and update consent forms.",
+            "description": "Conduct AI privacy impact assessment and update consent forms.",
+            "tasks": [
+              {
+                "uuid": "08da0fbe-d52c-4e86-bd2b-98b7190492eb",
+                "type": "milestone",
+                "title": "Complete privacy assessment and updated consent",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-25T00:00:00Z",
+                    "end": "2026-09-15T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "privacy-officer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "1e89ae96-a66d-49d7-b124-f92c3db3fdd3",
+        "title": "Unexamined AI Privacy Risk for Patient Data",
+        "description": "Privacy risks of AI processing of patient data have not been examined, including data retention and patient consent for ambient recording.",
+        "props": [
+          {
+            "name": "ai-gap-owner",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          },
+          {
+            "name": "ai-gap-status",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "investigating"
+          },
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "MEASURE 2.10"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "4cf84bb3-e1c2-47b9-b434-cda69c10057e"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "f94e9f78-6596-4c9e-bc30-8353d3596c0b"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "b6d7d887-d7db-4bb4-b75b-dfe741d0aa67"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "abc55e81-93bb-45a9-81a7-c00878fbcbe1",
+          "title": "Consent forms lacking AI recording disclosure",
+          "description": "Consent forms lacking AI recording disclosure",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-mea2.10-ext-evidence.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

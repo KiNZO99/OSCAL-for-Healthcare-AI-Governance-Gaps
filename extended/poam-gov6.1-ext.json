@@ -1,0 +1,223 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "29fefd2c-9e44-4a71-ab19-8fa3d3927edd",
+    "metadata": {
+      "title": "POA&M: Unassessed Third-Party AI Scribe Vendor Risk (Extended)",
+      "last-modified": "2026-07-25T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "vendor-liaison",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "a945dea7-3ae7-4365-9b1d-4b10f9d30937",
+        "title": "Observation: Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "Contract review found no clauses for evaluating the vendor's AI practices.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-25T00:00:00Z",
+        "props": [
+          {
+            "name": "ai-vendor-name",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "AmbiScribe AI"
+          },
+          {
+            "name": "ai-model-version",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "ambiscribe-llm-v3.2.1"
+          },
+          {
+            "name": "ai-lifecycle-phase",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "procurement"
+          }
+        ],
+        "links": [
+          {
+            "rel": "ai-vendor-assessment",
+            "href": "#4503a2c4-c98e-428d-b098-edcc724edd05"
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "href": "#4503a2c4-c98e-428d-b098-edcc724edd05",
+            "description": "Vendor contract with no AI assessment clauses"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "d41dc2b6-f899-49e6-b317-a1ec9d1801d9",
+        "title": "Finding: Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "Organization lacks vendor risk assessment procedures for AI third-party services per GOVERN 6.1.",
+        "props": [
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "GOVERN 6.1"
+          }
+        ],
+        "target": {
+          "type": "objective-id",
+          "target-id": "SR-3",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "a945dea7-3ae7-4365-9b1d-4b10f9d30937"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "038f1cad-6b4e-48a3-bb35-6fd3b12272d6"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "038f1cad-6b4e-48a3-bb35-6fd3b12272d6",
+        "title": "Risk: Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "No AI-specific vendor risk assessment has been conducted for the AmbiScribe AI service.",
+        "statement": "Unquantified third-party AI risk due to absence of formal vendor assessment.",
+        "status": "investigating",
+        "props": [
+          {
+            "name": "ai-risk-persistence-type",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "discrete"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "a945dea7-3ae7-4365-9b1d-4b10f9d30937"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "d124332f-c07c-4889-973d-3480637e5bfe",
+            "lifecycle": "planned",
+            "title": "Conduct AI-specific vendor risk assessment and update contract terms.",
+            "description": "Conduct AI-specific vendor risk assessment and update contract terms.",
+            "tasks": [
+              {
+                "uuid": "f0eb988a-9104-40be-82ee-702467bea9a5",
+                "type": "milestone",
+                "title": "Complete vendor risk assessment",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-25T00:00:00Z",
+                    "end": "2026-09-30T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "vendor-liaison"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "a3fd5af5-f8c6-4296-9d22-78f3277afe2b",
+        "title": "Unassessed Third-Party AI Scribe Vendor Risk",
+        "description": "No AI-specific vendor risk assessment has been conducted for the AmbiScribe AI service.",
+        "props": [
+          {
+            "name": "ai-gap-owner",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          },
+          {
+            "name": "ai-gap-status",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "investigating"
+          },
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "GOVERN 6.1"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "a945dea7-3ae7-4365-9b1d-4b10f9d30937"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "d41dc2b6-f899-49e6-b317-a1ec9d1801d9"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "038f1cad-6b4e-48a3-bb35-6fd3b12272d6"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "4503a2c4-c98e-428d-b098-edcc724edd05",
+          "title": "Vendor contract with no AI assessment clauses",
+          "description": "Vendor contract with no AI assessment clauses",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-gov6.1-ext-evidence.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

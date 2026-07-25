@@ -1,0 +1,223 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "0235d077-0e7d-4c22-96b5-8bc514135c2a",
+    "metadata": {
+      "title": "POA&M: Absent Post-Deployment AI Monitoring (Extended)",
+      "last-modified": "2026-07-25T00:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "ai-governance-lead",
+          "title": "AI Governance Lead"
+        },
+        {
+          "id": "privacy-officer",
+          "title": "Privacy Officer"
+        },
+        {
+          "id": "security-engineer",
+          "title": "Security Engineer"
+        },
+        {
+          "id": "vendor-liaison",
+          "title": "Vendor Liaison"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "88fdb77a-d35d-4047-9c80-69fa03e18f4c",
+          "type": "organization",
+          "name": "Clinic AI Governance Team"
+        },
+        {
+          "uuid": "0c47e306-0134-4582-8395-9d9d407079f4",
+          "type": "organization",
+          "name": "AmbiScribe AI Vendor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "ai-governance-lead",
+          "party-uuids": [
+            "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "ssp-stub.json"
+    },
+    "observations": [
+      {
+        "uuid": "31e5d895-4760-4d08-ae6f-9e46956f5f8a",
+        "title": "Observation: Absent Post-Deployment AI Monitoring",
+        "description": "Operations review confirmed no AI monitoring metrics or thresholds are defined.",
+        "methods": [
+          "EXAMINE"
+        ],
+        "collected": "2026-07-25T00:00:00Z",
+        "props": [
+          {
+            "name": "ai-vendor-name",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "AmbiScribe AI"
+          },
+          {
+            "name": "ai-model-version",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "ambiscribe-llm-v3.2.1"
+          },
+          {
+            "name": "ai-lifecycle-phase",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "monitoring"
+          }
+        ],
+        "links": [
+          {
+            "rel": "ai-drift-report",
+            "href": "#9d135531-d7ba-452c-b227-bc06a6d8573c"
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "href": "#9d135531-d7ba-452c-b227-bc06a6d8573c",
+            "description": "Operations documentation with no AI monitoring provisions"
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "5be6f0b2-bdb6-4d6a-bffc-e7b19a40c77e",
+        "title": "Finding: Absent Post-Deployment AI Monitoring",
+        "description": "Post-deployment monitoring has not been implemented per MANAGE 4.1.",
+        "props": [
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "MANAGE 4.1"
+          }
+        ],
+        "target": {
+          "type": "objective-id",
+          "target-id": "CA-7",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-observations": [
+          {
+            "observation-uuid": "31e5d895-4760-4d08-ae6f-9e46956f5f8a"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "cdafcc24-f2af-4d17-bd63-ec22b61c0a94"
+          }
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "cdafcc24-f2af-4d17-bd63-ec22b61c0a94",
+        "title": "Risk: Absent Post-Deployment AI Monitoring",
+        "description": "No post-deployment monitoring plan exists for the AI scribe. No tracking of hallucination rates, transcription quality, or model version changes.",
+        "statement": "AI output degradation from model drift or vendor updates will go undetected.",
+        "status": "open",
+        "props": [
+          {
+            "name": "ai-risk-persistence-type",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "continuous"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "31e5d895-4760-4d08-ae6f-9e46956f5f8a"
+          }
+        ],
+        "remediations": [
+          {
+            "uuid": "61cfd8c9-afe5-42de-9e12-3020fad8a196",
+            "lifecycle": "planned",
+            "title": "Implement post-deployment monitoring with defined metrics and thresholds.",
+            "description": "Implement post-deployment monitoring with defined metrics and thresholds.",
+            "tasks": [
+              {
+                "uuid": "dad75166-4cc4-4656-9473-546615332f87",
+                "type": "milestone",
+                "title": "Deploy AI monitoring dashboard",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2026-07-25T00:00:00Z",
+                    "end": "2026-11-30T00:00:00Z"
+                  }
+                },
+                "responsible-roles": [
+                  {
+                    "role-id": "ai-governance-lead"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "f3de81d7-03c7-4759-84d2-1497f6eafd32",
+        "title": "Absent Post-Deployment AI Monitoring",
+        "description": "No post-deployment monitoring plan exists for the AI scribe. No tracking of hallucination rates, transcription quality, or model version changes.",
+        "props": [
+          {
+            "name": "ai-gap-owner",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "88fdb77a-d35d-4047-9c80-69fa03e18f4c"
+          },
+          {
+            "name": "ai-gap-status",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "open"
+          },
+          {
+            "name": "ai-rmf-subcategory",
+            "ns": "https://github.com/KiNZO99/oscal-ai-governance/ns/ai-governance",
+            "value": "MANAGE 4.1"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "31e5d895-4760-4d08-ae6f-9e46956f5f8a"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "5be6f0b2-bdb6-4d6a-bffc-e7b19a40c77e"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "cdafcc24-f2af-4d17-bd63-ec22b61c0a94"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "9d135531-d7ba-452c-b227-bc06a6d8573c",
+          "title": "Operations documentation with no AI monitoring provisions",
+          "description": "Operations documentation with no AI monitoring provisions",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-man4.1-ext-evidence.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
