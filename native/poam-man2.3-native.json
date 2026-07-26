@@ -156,7 +156,12 @@
         {
           "uuid": "1f16c262-be0e-41dd-8e20-cd2aec54fac9",
           "title": "Incident response plan with no AI-specific sections",
-          "description": "Incident response plan with no AI-specific sections"
+          "description": "Incident response plan with no AI-specific sections",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-man2.3-native-evidence.pdf"
+            }
+          ]
         }
       ]
     }

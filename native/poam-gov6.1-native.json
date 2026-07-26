@@ -156,7 +156,12 @@
         {
           "uuid": "dff59fde-3969-4148-b26d-9d810105774a",
           "title": "Vendor contract with no AI assessment clauses",
-          "description": "Vendor contract with no AI assessment clauses"
+          "description": "Vendor contract with no AI assessment clauses",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-gov6.1-native-evidence.pdf"
+            }
+          ]
         }
       ]
     }

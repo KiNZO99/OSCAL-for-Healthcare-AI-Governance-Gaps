@@ -156,7 +156,12 @@
         {
           "uuid": "31a27042-b5dc-4835-ba67-49e13447d4c4",
           "title": "Operations documentation with no AI monitoring provisions",
-          "description": "Operations documentation with no AI monitoring provisions"
+          "description": "Operations documentation with no AI monitoring provisions",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-man4.1-native-evidence.pdf"
+            }
+          ]
         }
       ]
     }

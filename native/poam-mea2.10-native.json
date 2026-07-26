@@ -156,7 +156,12 @@
         {
           "uuid": "69c1c6f7-8fd6-40e8-8570-257a21352327",
           "title": "Consent forms lacking AI recording disclosure",
-          "description": "Consent forms lacking AI recording disclosure"
+          "description": "Consent forms lacking AI recording disclosure",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-mea2.10-native-evidence.pdf"
+            }
+          ]
         }
       ]
     }

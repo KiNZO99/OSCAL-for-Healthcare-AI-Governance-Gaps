@@ -1,0 +1,16 @@
+OSCAL POA&M Validation Results
+Date: 2026-07-25
+Validators: oscal-cli 2.3.1, Python jsonschema 4.26.0
+Schema: OSCAL 1.1.2
+
+NATIVE ENCODINGS — oscal-cli: 5/5 VALID | jsonschema: 5/5 PASS | 0 custom props each
+EXTENDED ENCODINGS — oscal-cli: 5/5 VALID | jsonschema: 5/5 PASS | 8 custom props each
+
+RESULT: 10/10 artifacts structurally valid under both validators.
+Custom namespace properties do not break schema validity.
+
+ROUND-TRIP CONVERSION TEST:
+Source: extended/poam-gov6.1-ext.json
+Path: JSON -> XML -> JSON (via oscal-cli 2.3.1)
+Custom properties survived: 8/8
+All AI governance namespace properties preserved.

@@ -156,7 +156,12 @@
         {
           "uuid": "acfe9429-b7c0-43b8-9948-79459b48c945",
           "title": "Security assessment records with no AI-specific testing",
-          "description": "Security assessment records with no AI-specific testing"
+          "description": "Security assessment records with no AI-specific testing",
+          "rlinks": [
+            {
+              "href": "./evidence/poam-mea2.7-native-evidence.pdf"
+            }
+          ]
         }
       ]
     }
