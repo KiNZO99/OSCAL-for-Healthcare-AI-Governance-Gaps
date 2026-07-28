@@ -19,7 +19,7 @@
       "name": "ai-gap-owner",
       "context": "poam-item",
       "values": "UUID reference to a party in metadata.parties",
-      "purpose": "poam-item has no native ownership field — ownership requires 5+ hop traversal"
+      "purpose": "poam-item has no native ownership field — ownership requires multiple link-relation"
     },
     {
       "name": "ai-gap-status",
